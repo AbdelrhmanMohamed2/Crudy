@@ -1,0 +1,16 @@
+<?php
+
+namespace {{ namespace }};
+
+use Illuminate\Database\Eloquent\Model;
+{{ importList }}
+class {{ modelName }} extends Model
+{
+    protected $fillable = [{{ fillableFields }}];
+
+    protected $casts = [
+        {{ castsArray }}
+    ];
+
+    {{ relationshipsMethods }}
+}

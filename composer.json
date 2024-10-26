@@ -1,0 +1,25 @@
+{
+    "name": "AbdelrhmanMohamed2\\Crudy",
+    "description": "A CRUD generator package for Laravel",
+    "type": "library",
+    "require": {
+        "php": "^8.0",
+        "illuminate/support": "^11.0",
+        "laravel/prompts": "^1.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "AbdelrhmanMohamed2\\Crudy\\": "src/"
+        },
+        "files": [
+            "src/Helpers/helpers.php"
+        ]
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "AbdelrhmanMohamed2\\Crudy\\CrudGeneratorServiceProvider"
+            ]
+        }
+    }
+}

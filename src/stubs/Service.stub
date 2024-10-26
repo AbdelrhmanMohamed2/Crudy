@@ -1,0 +1,35 @@
+<?php
+
+namespace {{ namespace }};
+
+use {{ modelNamespace }};
+
+class {{ modelName }}Service
+{
+    public function index()
+    {
+        return {{ modelName }}::get();
+    }
+
+    public function store(array ${{ camelModelName }}Data)
+    {
+        return {{ modelName }}::create(${{ camelModelName }}Data);
+    }
+
+    public function show({{ modelName }} ${{ camelModelName }})
+    {
+        return ${{ camelModelName }};
+    }
+
+    public function update({{ modelName }} ${{ camelModelName }}, array ${{ camelModelName }}Data)
+    {
+        ${{ camelModelName }}->update(${{ camelModelName }}Data);
+
+        return ${{ camelModelName }};
+    }
+
+    public function delete({{ modelName }} ${{ camelModelName }})
+    {
+        return ${{ camelModelName }}->delete();
+    }
+}

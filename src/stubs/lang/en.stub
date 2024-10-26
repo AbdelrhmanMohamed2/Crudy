@@ -1,0 +1,11 @@
+<?php
+
+return [
+    '{{ model_name }}' => [
+        'created' => '{{ model_name }} created successfully.',
+        'updated' => '{{ model_name }} updated successfully.',
+        'deleted' => '{{ model_name }} deleted successfully.',
+        'retrieved' => '{{ model_name }} retrieved successfully.',
+        'all_retrieved' => 'All {{ model_name }} retrieved successfully.',
+    ],
+];

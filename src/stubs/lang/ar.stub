@@ -1,0 +1,11 @@
+<?php
+
+return [
+    '{{ model_name }}' => [
+        'created' => 'تم إنشاء {{ model_name }} بنجاح.',
+        'updated' => 'تم تحديث {{ model_name }} بنجاح.',
+        'deleted' => 'تم حذف {{ model_name }} بنجاح.',
+        'retrieved' => 'تم استرجاع {{ model_name }} بنجاح.',
+        'all_retrieved' => 'تم استرجاع جميع {{ model_name }} بنجاح.',
+    ],
+];

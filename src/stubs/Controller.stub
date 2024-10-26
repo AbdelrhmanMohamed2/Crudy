@@ -1,0 +1,52 @@
+<?php
+
+namespace {{ namespace }};
+
+{{ imports }}
+
+class {{ name }}Controller extends Controller
+{
+    public function __construct(private {{ name }}Service ${{ camelName }}Service) {}
+
+    public function index()
+    {
+        return apiResponse(
+            data: {{ name }}Resource::collection($this->{{ camelName }}Service->index()),
+            message: __('messages.{{ snakeName }}.all_retrieved'),
+        );
+    }
+
+    public function store(Store{{ name }}Request $request)
+    {
+        return apiResponse(
+            data: {{ name }}Resource::make($this->{{ camelName }}Service->store($request->validated())),
+            message: __('messages.{{ snakeName }}.created'),
+            code: 201
+        );
+    }
+
+    public function show({{ name }} ${{ camelName }})
+    {
+        return apiResponse(
+            data: {{ name }}Resource::make($this->{{ camelName }}Service->show(${{ camelName }})),
+            message: __('messages.{{ snakeName }}.retrieved'),
+        );
+    }
+
+    public function update(Update{{ name }}Request $request, {{ name }} ${{ camelName }})
+    {
+        return apiResponse(
+            data: {{ name }}Resource::make($this->{{ camelName }}Service->update(${{ camelName }}, $request->validated())),
+            message: __('messages.{{ snakeName }}.updated'),
+        );
+    }
+
+    public function destroy({{ name }} ${{ camelName }})
+    {
+        return apiResponse(
+            data: {{ name }}Resource::make($this->{{ camelName }}Service->delete(${{ camelName }})),
+            message: __('messages.{{ snakeName }}.deleted'),
+            code: 204
+        );
+    }
+}
