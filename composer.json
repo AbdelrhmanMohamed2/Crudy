@@ -1,5 +1,5 @@
 {
-    "name": "AbdelrhmanMohamed2\\Crudy",
+    "name": "essa/crudy",
     "description": "A CRUD generator package for Laravel",
     "type": "library",
     "require": {
