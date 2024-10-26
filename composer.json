@@ -1,5 +1,5 @@
 {
-    "name": "essa/crudy",
+    "name": "abdo3essa/crudy",
     "description": "A CRUD generator package for Laravel",
     "type": "library",
     "require": {
